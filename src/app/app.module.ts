@@ -6,6 +6,7 @@ import {RouterModule} from '@angular/router';
 import {DashboardModule} from './features/dashboard/dashboard.module';
 import {CoreModule} from './core/core.module';
 import {SharedModule} from './shared/shared.module';
+import {LoginComponent} from './core/login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,10 @@ import {SharedModule} from './shared/shared.module';
     DashboardModule,
     CoreModule,
     SharedModule,
-    RouterModule.forRoot([{
-      path: '', redirectTo: 'dashboard', pathMatch: 'full'
-    }])
+    RouterModule.forRoot([
+      {path: '', redirectTo: 'login', pathMatch: 'full'},
+      {path: 'login', component: LoginComponent, pathMatch: 'full'}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

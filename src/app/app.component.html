@@ -1,1 +1,6 @@
-<router-outlet></router-outlet>
+<!-- Site wrapper -->
+<app-main-header *ngIf="isLogin"></app-main-header>
+<app-side-nav *ngIf="isLogin"></app-side-nav>
+<div class="wrapper">
+  <router-outlet></router-outlet>
+</div>
