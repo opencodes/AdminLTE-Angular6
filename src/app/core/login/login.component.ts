@@ -33,4 +33,8 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['dashboard']);
     });
   }
+
+  getUserRole(){
+    this._authSvc.getUserProfile()
+  }
 }

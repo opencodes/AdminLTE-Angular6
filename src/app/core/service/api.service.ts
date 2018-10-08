@@ -12,8 +12,8 @@ export class ApiService {
   constructor() {
   }
 
-  getAPIUrl() {
-    return this.environment.production + Urls.USER_PROFILE;
+  getAPIUrl(url) {
+    return this.environment.production + url;
   }
 
 }
